@@ -2,94 +2,81 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Litecoin Faucet</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f0f8ff;
-      text-align: center;
-      padding: 20px;
-    }
-    .container {
-      max-width: 400px;
-      margin: auto;
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-    input, button {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      font-size: 16px;
-    }
-    .ad {
-      margin: 20px 0;
-      padding: 10px;
-      background: #e6e6e6;
-      border-radius: 5px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Litecoin Faucet - galvarado91</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #1e90ff;
+            color: white;
+            padding: 20px 0;
+        }
+        main {
+            padding: 20px;
+        }
+        .banner-ad {
+            margin: 10px auto;
+        }
+        .claim-box {
+            background: white;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <h2>Litecoin Faucet</h2>
-    <p>Reclama 0.00000100 LTC cada 60 minutos</p>
-    <input type="text" id="wallet" placeholder="Ingresa tu dirección Litecoin">
-    <button onclick="claim()">Reclamar</button>
-    <div id="status"></div>
-    <div class="ad">[Anuncio aquí: xxxx]</div>
-  </div>
-  <script>
-    const cooldown = 60 * 60 * 1000; // 60 minutos en milisegundos
 
-    function claim() {
-      const wallet = document.getElementById("wallet").value.trim();
-      const lastClaim = localStorage.getItem("ltc_" + wallet);
-      const now = Date.now();
+<header>
+    <h1>Litecoin Faucet</h1>
+    <p>¡Reclama 0.00000100 LTC cada hora!</p>
+</header>
 
-      if (!wallet) {
-        document.getElementById("status").innerText = "Por favor ingresa tu dirección Litecoin.";
+<!-- Banner Ad -->
+<div class="banner-ad">
+<script type="text/javascript">
+	atOptions = {
+		'key' : '37ac12f05dc100d831b61d19b7b6fd23',
+		'format' : 'iframe',
+		'height' : 90,
+		'width' : 728,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/37ac12f05dc100d831b61d19b7b6fd23/invoke.js"></script>
+</div>
+
+<main>
+    <div class="claim-box">
+        <h2>Ingresa tu dirección de Litecoin:</h2>
+        <input type="text" id="wallet" placeholder="LTC Wallet" style="width: 100%; padding: 10px;"><br><br>
+        <button onclick="claim()" style="padding: 10px 20px;">Reclamar</button>
+        <p id="message"></p>
+    </div>
+</main>
+
+<!-- Faucet Claim Script -->
+<script>
+function claim() {
+    const wallet = document.getElementById("wallet").value;
+    if (!wallet) {
+        document.getElementById("message").innerText = "Por favor, ingresa una dirección de Litecoin válida.";
         return;
-      }
-
-      if (lastClaim && now - parseInt(lastClaim) < cooldown) {
-        const remaining = cooldown - (now - parseInt(lastClaim));
-        const minutes = Math.floor(remaining / 60000);
-        const seconds = Math.floor((remaining % 60000) / 1000);
-        document.getElementById("status").innerText = `Espera ${minutes}m ${seconds}s para reclamar de nuevo.`;
-        return;
-      }
-
-      fetch("https://faucetpay.io/api/v1/send", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          api_key: "TU_API_KEY",
-          to: wallet,
-          amount: "0.00000100",
-          currency: "LTC",
-          ref: "litecoin_faucet"
-        }),
-      })
-      .then(response => response.json())
-      .then(data => {
-        if (data.status === 200) {
-          localStorage.setItem("ltc_" + wallet, now);
-          document.getElementById("status").innerText = "¡Pago enviado! Reclama de nuevo en 60 minutos.";
-        } else {
-          document.getElementById("status").innerText = "Error: " + data.message;
-        }
-      })
-      .catch(() => {
-        document.getElementById("status").innerText = "Hubo un error al procesar el reclamo.";
-      });
     }
-  </script>
+    document.getElementById("message").innerText = "¡Recompensa enviada a " + wallet + "!";
+}
+</script>
+
+<!-- Popunder Ad -->
+<script type='text/javascript' src='//pl27234457.profitableratecpm.com/69/3e/71/693e71922781c0a192eacd5fa1e485d2.js'></script>
+
 </body>
 </html>
