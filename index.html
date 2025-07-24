@@ -1,82 +1,56 @@
+rotador
 
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Litecoin Faucet - galvarado91</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f8ff;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-        header {
-            background-color: #1e90ff;
-            color: white;
-            padding: 20px 0;
-        }
-        main {
-            padding: 20px;
-        }
-        .banner-ad {
-            margin: 10px auto;
-        }
-        .claim-box {
-            background: white;
-            padding: 20px;
-            margin: 20px auto;
-            max-width: 400px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Contenido Disponible</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Redirige automáticamente a los 5 segundos -->
+  <meta http-equiv="refresh" content="5;url=rotador_links_actualizado.html">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f7fa;
+      text-align: center;
+      padding: 60px 20px;
+    }
+    .box {
+      background: #fff;
+      max-width: 500px;
+      margin: auto;
+      padding: 40px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      border-radius: 12px;
+    }
+    h1 {
+      color: #333;
+    }
+    p {
+      color: #555;
+      font-size: 16px;
+    }
+    .loader {
+      margin: 30px auto;
+      width: 60px;
+      height: 60px;
+      border: 6px solid #ddd;
+      border-top: 6px solid #3498db;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+  </style>
 </head>
 <body>
-
-<header>
-    <h1>Litecoin Faucet</h1>
-    <p>¡Reclama 0.00000100 LTC cada hora!</p>
-</header>
-
-<!-- Banner Ad -->
-<div class="banner-ad">
-<script type="text/javascript">
-	atOptions = {
-		'key' : '37ac12f05dc100d831b61d19b7b6fd23',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/37ac12f05dc100d831b61d19b7b6fd23/invoke.js"></script>
-</div>
-
-<main>
-    <div class="claim-box">
-        <h2>Ingresa tu dirección de Litecoin:</h2>
-        <input type="text" id="wallet" placeholder="LTC Wallet" style="width: 100%; padding: 10px;"><br><br>
-        <button onclick="claim()" style="padding: 10px 20px;">Reclamar</button>
-        <p id="message"></p>
-    </div>
-</main>
-
-<!-- Faucet Claim Script -->
-<script>
-function claim() {
-    const wallet = document.getElementById("wallet").value;
-    if (!wallet) {
-        document.getElementById("message").innerText = "Por favor, ingresa una dirección de Litecoin válida.";
-        return;
-    }
-    document.getElementById("message").innerText = "¡Recompensa enviada a " + wallet + "!";
-}
-</script>
-
-<!-- Popunder Ad -->
-<script type='text/javascript' src='//pl27234457.profitableratecpm.com/69/3e/71/693e71922781c0a192eacd5fa1e485d2.js'></script>
-
+  <div class="box">
+    <h1>Gracias por visitar</h1>
+    <p>Estamos preparando tu contenido exclusivo...</p>
+    <div class="loader"></div>
+    <p>Serás redirigido automáticamente en unos segundos.</p>
+  </div>
 </body>
 </html>
