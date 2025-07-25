@@ -1,49 +1,74 @@
-rotador
+easyhits4u
 
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Contenido Disponible</title>
+  <title>Redirigiendo...</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Redirige automáticamente a los 5 segundos -->
-  <meta http-equiv="refresh" content="5;url=rotador_links_actualizado.html">
-
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f4f7fa;
-      text-align: center;
-      padding: 60px 20px;
+    body { 
+      font-family: Arial, sans-serif; 
+      background: #f4f7fa; 
+      text-align: center; 
+      padding: 60px 20px; 
     }
-    .box {
-      background: #fff;
-      max-width: 500px;
-      margin: auto;
-      padding: 40px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
-      border-radius: 12px;
+    .box { 
+      background: #fff; 
+      max-width: 500px; 
+      margin: auto; 
+      padding: 40px; 
+      box-shadow: 0 0 15px rgba(0,0,0,0.1); 
+      border-radius: 12px; 
     }
-    h1 {
-      color: #333;
+    .loader { 
+      margin: 30px auto; 
+      width: 60px; 
+      height: 60px; 
+      border: 6px solid #ddd; 
+      border-top: 6px solid #3498db; 
+      border-radius: 50%; 
+      animation: spin 1s linear infinite; 
     }
-    p {
-      color: #555;
-      font-size: 16px;
-    }
-    .loader {
-      margin: 30px auto;
-      width: 60px;
-      height: 60px;
-      border: 6px solid #ddd;
-      border-top: 6px solid #3498db;
-      border-radius: 50%;
-      animation: spin 1s linear infinite;
-    }
-    @keyframes spin {
-      to { transform: rotate(360deg); }
+    @keyframes spin { 
+      to { transform: rotate(360deg); } 
     }
   </style>
+  <script>
+    const enlaces = [
+      'https://otieu.com/4/9621091',
+      'https://otieu.com/4/9621653',
+    
+      'https://otieu.com/4/9621654',
+      'https://otieu.com/4/9621655',
+      
+      'https://otieu.com/4/9621656',
+      'https://otieu.com/4/9621657',
+      
+      'https://otieu.com/4/9621658',
+      'https://otieu.com/4/9621659',
+      
+      'https://otieu.com/4/9621660',
+      'https://otieu.com/4/9621662',
+      
+    ];
+    
+    const bots = ["bot", "crawl", "spider", "slurp", "headless", "phantomjs", "selenium"];
+    const isBot = bots.some(bot => navigator.userAgent.toLowerCase().includes(bot));
+
+    function redireccionar() {
+      if (isBot) { 
+        console.log("Bot detectado."); 
+        return; 
+      }
+      const enlace = enlaces[Math.floor(Math.random() * enlaces.length)];
+      setTimeout(() => { 
+        window.location.href = enlace; 
+      }, 2000);
+    }
+
+    window.onload = redireccionar;
+  </script>
 </head>
 <body>
   <div class="box">
