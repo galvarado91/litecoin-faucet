@@ -1,42 +1,39 @@
-Codigo Actualizado 03.08.2025 10:10
+ROTADOR
 
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <title>Redirigiendo...</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <style>
     body {
       font-family: Arial, sans-serif;
       background: #f4f7fa;
       text-align: center;
-      padding: 120px 20px 120px 20px; /* espacio arriba y abajo por los banners fijos */
+      padding: 60px 20px;
+      margin: 0;
     }
-
     .box {
       background: #fff;
       max-width: 500px;
       margin: auto;
-      padding: 40px;
+      padding: 30px;
       box-shadow: 0 0 15px rgba(0,0,0,0.1);
       border-radius: 12px;
     }
-
     .loader {
       margin: 30px auto;
-      width: 60px;
-      height: 60px;
-      border: 6px solid #ddd;
-      border-top: 6px solid #3498db;
+      width: 50px;
+      height: 50px;
+      border: 5px solid #ddd;
+      border-top: 5px solid #3498db;
       border-radius: 50%;
       animation: spin 1s linear infinite;
     }
-
     @keyframes spin {
       to { transform: rotate(360deg); }
     }
-
     .banner-left, .banner-right {
       position: fixed;
       top: 20%;
@@ -44,34 +41,57 @@ Codigo Actualizado 03.08.2025 10:10
       height: 600px;
       z-index: 1000;
     }
+    .banner-left { left: 0; }
+    .banner-right { right: 0; }
 
-    .banner-left {
-      left: 0;
-    }
-
-    .banner-right {
-      right: 0;
-    }
-
-    .banner-top, .banner-bottom {
-      position: fixed;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 728px;
-      height: 90px;
-      z-index: 1000;
-    }
-
-    .banner-top {
-      top: 0;
-    }
-
-    .banner-bottom {
-      bottom: 0;
+    @media (max-width: 768px) {
+      .banner-left, .banner-right {
+        display: none;
+      }
+      .box {
+        padding: 20px;
+      }
     }
   </style>
+</head>
+<body>
+  <div class="box">
+    <h1>Gracias por visitar</h1>
+    <p>Estamos preparando tu contenido exclusivo...</p>
+    <div class="loader"></div>
+    <p>Serás redirigido automáticamente en unos segundos.</p>
+  </div>
 
-  <script>
+  <!-- Banner izquierdo -->
+  <div class="banner-left">
+    <script type="text/javascript" async>
+      atOptions = {
+        'key': 'c951ab7b0375f753e953cf78b4b4bbf1',
+        'format': 'iframe',
+        'height': 600,
+        'width': 160,
+        'params': {}
+      };
+    </script>
+    <script async src="//www.highperformanceformat.com/c951ab7b0375f753e953cf78b4b4bbf1/invoke.js"></script>
+  </div>
+
+  <!-- Banner derecho -->
+  <div class="banner-right">
+    <script type="text/javascript" async>
+      atOptions = {
+        'key': 'c951ab7b0375f753e953cf78b4b4bbf1',
+        'format': 'iframe',
+        'height': 600,
+        'width': 160,
+        'params': {}
+      };
+    </script>
+    <script async src="//www.highperformanceformat.com/c951ab7b0375f753e953cf78b4b4bbf1/invoke.js"></script>
+  </div>
+
+  <!-- Script de redirección -->
+  <script defer>
     const enlaces = [
       'https://www.profitableratecpm.com/tg4925wu?key=881390cc73acb2dbf7ed411d47708805',
       'https://www.profitableratecpm.com/xx7ibrgyi?key=a8aa9790d03d9bfd081929c3c148c6d1',
@@ -84,10 +104,8 @@ Codigo Actualizado 03.08.2025 10:10
       'https://www.profitableratecpm.com/z9w7v98yrd?key=487675e67f4ba23a2c38673be2aa3358',
       'https://www.profitableratecpm.com/v26dt4b3?key=cc596ac56ef93c8523d71c6042f978e5'
     ];
-
     const bots = ["bot", "crawl", "spider", "slurp", "headless", "phantomjs", "selenium"];
     const isBot = bots.some(bot => navigator.userAgent.toLowerCase().includes(bot));
-
     function redireccionar() {
       if (isBot) {
         console.log("Bot detectado.");
@@ -96,84 +114,7 @@ Codigo Actualizado 03.08.2025 10:10
       const enlace = enlaces[Math.floor(Math.random() * enlaces.length)];
       setTimeout(() => { window.location.href = enlace; }, 1000);
     }
-
     window.onload = redireccionar;
   </script>
-</head>
-<body>
-
-  <!-- 🔼 Banner superior fijo -->
-  <div class="banner-top">
-    <script type="text/javascript">
-      atOptions = {
-        'key': 'c951ab7b0375f753e953cf78b4b4bbf1',
-        'format': 'iframe',
-        'height': 90,
-        'width': 728,
-        'params': {}
-      };
-    </script>
-    <script type="text/javascript" src="//www.highperformanceformat.com/c951ab7b0375f753e953cf78b4b4bbf1/invoke.js"></script>
-  </div>
-
-  <!-- 🔽 Banner inferior fijo -->
-  <div class="banner-bottom">
-    <script type="text/javascript">
-      atOptions = {
-        'key': 'c951ab7b0375f753e953cf78b4b4bbf1',
-        'format': 'iframe',
-        'height': 90,
-        'width': 728,
-        'params': {}
-      };
-    </script>
-    <script type="text/javascript" src="//www.highperformanceformat.com/c951ab7b0375f753e953cf78b4b4bbf1/invoke.js"></script>
-  </div>
-
-  <!-- 🧾 Contenido principal -->
-  <div class="box">
-    <h1>Gracias por visitar</h1>
-    <p>Estamos preparando tu contenido exclusivo...</p>
-    <div class="loader"></div>
-    <p>Serás redirigido automáticamente en unos segundos.</p>
-
-    <!-- 🎯 Banner central A-ADS -->
-    <div id="frame" style="width:728px; height:auto; margin: 30px auto;">
-      <iframe data-aa='2404678' src='//ad.a-ads.com/2404678?size=728x90'
-        style='width:728px; height:90px; border:0px; padding:0; overflow:hidden; background-color: transparent;'>
-      </iframe>
-      <a style="display: block; text-align: right; font-size: 12px;"
-        href="https://aads.com/campaigns/new/?source_id=2404678&source_type=ad_unit&partner=2404678">Advertise here</a>
-    </div>
-  </div>
-
-  <!-- ◀️ Banner lateral izquierdo -->
-  <div class="banner-left">
-    <script type="text/javascript">
-      atOptions = {
-        'key': 'c951ab7b0375f753e953cf78b4b4bbf1',
-        'format': 'iframe',
-        'height': 600,
-        'width': 160,
-        'params': {}
-      };
-    </script>
-    <script type="text/javascript" src="//www.highperformanceformat.com/c951ab7b0375f753e953cf78b4b4bbf1/invoke.js"></script>
-  </div>
-
-  <!-- ▶️ Banner lateral derecho -->
-  <div class="banner-right">
-    <script type="text/javascript">
-      atOptions = {
-        'key': 'c951ab7b0375f753e953cf78b4b4bbf1',
-        'format': 'iframe',
-        'height': 600,
-        'width': 160,
-        'params': {}
-      };
-    </script>
-    <script type="text/javascript" src="//www.highperformanceformat.com/c951ab7b0375f753e953cf78b4b4bbf1/invoke.js"></script>
-  </div>
-
 </body>
 </html>
